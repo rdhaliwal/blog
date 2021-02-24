@@ -1,3 +1,4 @@
+/* home */
 :root {
   --pad: 10px;
   --color-background: #f2e2dd;
@@ -12,6 +13,18 @@
     --color-text: #f2e2dd;
   }
 }
+
+/* logo-hover */
+:root {
+  --color-primary: #D64161;
+  --color-secondary: #FFC86D;
+  --color-svg: #961010;
+
+  --x: 1;
+  --y: 1;
+}
+
+
 
 
 html { box-sizing: border-box; }

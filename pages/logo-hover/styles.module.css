@@ -1,0 +1,62 @@
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: var(--pad);
+}
+
+.debugPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-text);
+  padding: var(--pad);
+  margin: var(--pad);
+  border: 1px solid var(--color-text);
+}
+
+.centerTheThing {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.logoSvg {
+  --rotateX: calc(var(--y) *  30deg);
+  --rotateY: calc(var(--x) *  30deg);
+  --translateX: calc(var(--x) * 0px);
+  --translateY: calc(var(--y) * -25px);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  transform: rotateX(var(--rotateX))
+             rotateY(var(--rotateY))
+             translateX(var(--translateX))
+             translateY(var(--translateY));
+}
+
+.logoSvg > svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--color-svg);
+}
