@@ -60,9 +60,11 @@ const Home = () => {
       <div className={styles.hero}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Hello! I'm Randeep</h1>
+          {/*
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam deserunt magni alias aspernatur cum sequi nihil consequuntur optio ipsa praesentium soluta distinctio impedit doloremque, officia debitis voluptatem enim, iste earum? Error quas placeat animi eaque sint ratione magni! Ratione voluptatum officia optio porro impedit atque ex reprehenderit dolores qui veniam, quasi necessitatibus reiciendis assumenda asperiores veritatis illum, eveniet autem quia?
           </p>
+          */}
         </div>
         <div className={styles.imageContainer}>
         </div>
