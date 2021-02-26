@@ -7,7 +7,9 @@ const MyApp = ({ Component, pageProps }) => {
     <React.Fragment>
       <Head>
         <title>{pageProps.title || 'Randeep Dhaliwal'}</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar" rel="preload" />
+
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Eczar&display=swap" as="style" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar&display=swap" />
       </Head>
 
       <Component {...pageProps} />
