@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styles from './styles.module.css';
+import React, { useEffect, useState } from "react";
+import styles from "./styles.module.css";
 
 const blobMask = (animationDisabled) => `
 <?xml version="1.0" encoding="UTF-8"?>
@@ -25,21 +25,20 @@ const blobMask = (animationDisabled) => `
 `;
 
 const BlobBackground = () => {
-  const PREFERS_REDUCED_MOTION = typeof window !== 'undefined' &&
-        typeof window.matchMedia === 'function' &&
-        window.matchMedia('(prefers-reduced-motion)').matches;
+  const PREFERS_REDUCED_MOTION =
+    typeof window !== "undefined" &&
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion)").matches;
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: blobMask(PREFERS_REDUCED_MOTION) }} />
+    <div
+      dangerouslySetInnerHTML={{ __html: blobMask(PREFERS_REDUCED_MOTION) }}
+    />
   );
 };
 
 const Blob = ({ className }) => {
-  return (
-    <div className={className}
-      style={{ clipPath: `url(#Blobby)` }}
-    />
-  );
+  return <div className={className} style={{ clipPath: `url(#Blobby)` }} />;
 };
 
 const Home = () => {
@@ -53,17 +52,19 @@ const Home = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Hello! My name is Randeep</h1>
           <p className={styles.paragraph}>
-            I'm an Australian-based front-end developer. I've got quite a few years of experience
-            building React-based websites, powered by either Redux or GraphQL. Recently I've started
-            branching out my front-end skillset and have been learning how to build iOS Apps using
-            UIKit and SwiftUI. I also enjoy working on backend APIs, with most of my experience
-            centered around either Node.js or Ruby on Rails.
+            I'm an Australian-based front-end developer. I've got quite a few
+            years of experience building React-based websites, powered by either
+            Redux or GraphQL. Recently I've started branching out my front-end
+            skillset and have been learning how to build iOS Apps using UIKit
+            and SwiftUI. I also enjoy working on backend APIs, with most of my
+            experience centered around either Node.js or Ruby on Rails.
           </p>
           <p className={styles.paragraph}>
-            If you'd like to learn more, take a gander at my <a href="/about/cv">CV.</a>
-            &nbsp;
-            Or, feel free to get in touch by dropping me an email at: <br/>
-            hi [at] randeep [dot] dev
+            If you'd like to learn more, take a gander at my{" "}
+            <a href="/about/cv">CV.</a>
+            &nbsp; Or, feel free to get in touch by dropping me an email at:{" "}
+            <br />
+            contact [at] randeep [dot] dev
           </p>
         </div>
       </div>
