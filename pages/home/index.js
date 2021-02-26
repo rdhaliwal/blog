@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
-const animatedBlobMask = `
+const blobMask = (animationDisabled) => `
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="0" height="0" viewBox="0 0 350 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -9,7 +9,7 @@ const animatedBlobMask = `
       <path class="clip" d="M340.359196,232.907053 C369.892183,148.680525 331.647945,55.2974307 224.595191,15.3076571 C127.999397,-20.7822144 15.0584823,2.4783672 1.02368828,133.257611 C-8.11390749,218.443339 44.9256302,318.452481 119.96223,341.542678 C192.34282,368.494915 306.073047,330.694892 340.359196,232.907053 Z">
         <animate
           id="GentleMorph"
-          dur="30"
+          dur="${animationDisabled ? 0 : 45}"
           begin="0"
           repeatCount="indefinite"
           attributeName="d"
@@ -24,32 +24,21 @@ const animatedBlobMask = `
 </svg>
 `;
 
-const staticBlobMask = `
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="0" height="0" viewBox="0 0 350 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <clipPath id="Blobby" clipPathUnits="objectBoundingBox" transform="scale(0.002857143, 0.002857143)">
-      <path class="clip" d="M340.359196,232.907053 C369.892183,148.680525 331.647945,55.2974307 224.595191,15.3076571 C127.999397,-20.7822144 15.0584823,2.4783672 1.02368828,133.257611 C-8.11390749,218.443339 44.9256302,318.452481 119.96223,341.542678 C192.34282,368.494915 306.073047,330.694892 340.359196,232.907053 Z">
-      </path>
-    </clipPath>
-  </defs>
-</svg>
-`;
-
 const BlobBackground = () => {
   const PREFERS_REDUCED_MOTION = typeof window !== 'undefined' &&
         typeof window.matchMedia === 'function' &&
         window.matchMedia('(prefers-reduced-motion)').matches;
 
   return (
-    <React.Fragment>
-      <div dangerouslySetInnerHTML={{ __html: PREFERS_REDUCED_MOTION ? staticBlobMask: animatedBlobMask }} />
-      <div className={styles.blobby}
-        style={{
-          clipPath: `url(#Blobby)`,
-        }}
-        />
-    </React.Fragment>
+    <div dangerouslySetInnerHTML={{ __html: blobMask(PREFERS_REDUCED_MOTION) }} />
+  );
+};
+
+const Blob = ({ className }) => {
+  return (
+    <div className={className}
+      style={{ clipPath: `url(#Blobby)` }}
+    />
   );
 };
 
@@ -57,6 +46,9 @@ const Home = () => {
   return (
     <div className={styles.page}>
       <BlobBackground />
+      <Blob className={styles.blob1} />
+      <Blob className={styles.blob2} />
+      <Blob className={styles.blob3} />
       <div className={styles.hero}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Hello! I'm Randeep</h1>

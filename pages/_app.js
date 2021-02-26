@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import React from 'react';
+import Head from 'next/head';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <React.Fragment>
+      <Head>
+        <title>{pageProps.title || 'Randeep Dhaliwal'}</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar" rel="preload" />
+      </Head>
 
-export default MyApp
+      <Component {...pageProps} />
+    </React.Fragment>
+  );
+};
+
+export default MyApp;

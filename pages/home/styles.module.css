@@ -9,27 +9,61 @@
   align-items: center;
 }
 
-.blobby {
-  clip-path: url(#ImperfectCircle);
+.blob1 {
+  clip-path: url(#Blobby);
   position: fixed;
   z-index: 0;
-  top: -20vw;
-  left: 20vw;
-  width: 150vw;
-  height: 150vw;
+  top: -2.5vw;
+  left: -10vw;
+  width: 25vw;
+  height: 25vw;
   transition: var(--color-transition);
-
-  background-color: var(--color-blob)
+  background-color: var(--color-blob);
 }
 
-@media only screen and (min-width: 1024px) {
-  .blobby {
-    left: 50vw;
-    width: 100vw;
-    height: 100vw;
+.blob2 {
+  clip-path: url(#Blobby);
+  position: fixed;
+  z-index: 0;
+  top: -10%;
+  right: 10vw;
+  width: 33vw;
+  height: 33vw;
+  transition: var(--color-transition);
+  background-color: var(--color-blob);
+
+  filter: hue-rotate(-45deg);
+  transform: scaleX(-100%);
+}
+
+.blob3 {
+  clip-path: url(#Blobby);
+  position: fixed;
+  z-index: 0;
+  bottom: -17.5vw;
+  left: 33%;
+  width: 40vw;
+  height: 35vw;
+  transition: var(--color-transition);
+  background-color: var(--color-blob);
+
+  filter: hue-rotate(90deg);
+  transform: scale(-100%, -100%);
+
+  /*animation: up 180s infinite;*/
+  /*animation-timing-function: cubic-bezier(.77,0,.18,1);*/
+}
+
+
+/*@keyframes up {
+  0% {
+    bottom: -33%;
+  }
+  100% {
+    bottom: 125%;
   }
 }
-
+*/
 .hero {
   position: relative;
   z-index: 1;
