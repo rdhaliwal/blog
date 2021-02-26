@@ -90,6 +90,9 @@
   margin-bottom: calc(var(--pad) * 2);
 }
 
-@media only screen and (min-width: 1024px) {
+.paragraph {
+  max-width: var(--max-body-width);
 }
 
+@media only screen and (min-width: 1024px) {
+}

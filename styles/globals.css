@@ -4,6 +4,7 @@
   --color-background: #f2e2dd;
   --color-blob: #bbc8ba;
   --color-text: #00213a;
+  --max-body-width: 1024px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +39,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 1.125em;
 
 }
 
@@ -51,3 +53,6 @@ h1, h2, h3, h4, h5, h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+a {
+  color: inherit;
+}

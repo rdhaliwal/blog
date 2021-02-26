@@ -9,7 +9,7 @@ const blobMask = (animationDisabled) => `
       <path class="clip" d="M340.359196,232.907053 C369.892183,148.680525 331.647945,55.2974307 224.595191,15.3076571 C127.999397,-20.7822144 15.0584823,2.4783672 1.02368828,133.257611 C-8.11390749,218.443339 44.9256302,318.452481 119.96223,341.542678 C192.34282,368.494915 306.073047,330.694892 340.359196,232.907053 Z">
         <animate
           id="GentleMorph"
-          dur="${animationDisabled ? 0 : 45}"
+          dur="${animationDisabled ? 0 : 35}"
           begin="0"
           repeatCount="indefinite"
           attributeName="d"
@@ -51,14 +51,20 @@ const Home = () => {
       <Blob className={styles.blob3} />
       <div className={styles.hero}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Hello! I'm Randeep</h1>
-          {/*
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam deserunt magni alias aspernatur cum sequi nihil consequuntur optio ipsa praesentium soluta distinctio impedit doloremque, officia debitis voluptatem enim, iste earum? Error quas placeat animi eaque sint ratione magni! Ratione voluptatum officia optio porro impedit atque ex reprehenderit dolores qui veniam, quasi necessitatibus reiciendis assumenda asperiores veritatis illum, eveniet autem quia?
+          <h1 className={styles.title}>Hello! My name is Randeep</h1>
+          <p className={styles.paragraph}>
+            I'm an Australian-based front-end developer. I've got quite a few years of experience
+            building React-based websites, powered by either Redux or GraphQL. Recently I've started
+            branching out my front-end skillset and have been learning how to build iOS Apps using
+            UIKit and SwiftUI. I also enjoy working on backend APIs, with most of my experience
+            centered around either Node.js or Ruby on Rails.
           </p>
-          */}
-        </div>
-        <div className={styles.imageContainer}>
+          <p className={styles.paragraph}>
+            If you'd like to learn more, take a gander at my <a href="/about/cv">CV.</a>
+            &nbsp;
+            Or, feel free to get in touch by dropping me an email at: <br/>
+            hi [at] randeep [dot] dev
+          </p>
         </div>
       </div>
     </div>
