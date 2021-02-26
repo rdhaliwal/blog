@@ -4,6 +4,7 @@ const curriculumVitae = () => {
       style={{
         maxWidth: "var(--max-body-width)",
         margin: "0 auto",
+        padding: "var(--pad)",
       }}
     >
       <h1 id="curriculum-vitae">Curriculum vitae</h1>

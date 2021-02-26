@@ -35,12 +35,20 @@ html,
 body {
   width: 100%;
   height: 100%;
-    padding: 0;
+  padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 1.125em;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.125em;
+  line-height: 1.25em;
+}
 
+@media only screen and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
 }
 
 body {
@@ -50,7 +58,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Eczar', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {

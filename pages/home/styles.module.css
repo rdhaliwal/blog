@@ -85,7 +85,8 @@
 .title {
   margin: var(--pad);
   padding: 0;
-  font-size: 3em;
+  font-size: 4rem;
+  line-height: 2em;
   text-align: center;
   margin-bottom: calc(var(--pad) * 2);
 }
@@ -94,5 +95,12 @@
   max-width: var(--max-body-width);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
+  .hero {
+    padding: calc(var(--pad) * 2);
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 1.5em;
+  }
 }
