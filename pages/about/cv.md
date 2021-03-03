@@ -1,9 +1,13 @@
 import BlogEntry from '../../components/BlogEntry';
+
+export const meta = {
+  title: 'Curriculum vitae'
+};
+
 export default ({ children }) => (
-  <BlogEntry title='Curriculum vitae // Randeep Dhaliwal'>
-    {children}
-  </BlogEntry>
+  <BlogEntry {...meta}> {children} </BlogEntry>
 );
+
 
 # Curriculum vitae
 
