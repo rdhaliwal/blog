@@ -14,7 +14,7 @@ export default ({ children }) => (
 ## Details
 
 - Name: Randeep Dhaliwal
-- Email: [contact@randeep.dev](mailto:contact@randeep.dev)
+- Email: contact [at] randeep [dot] dev
 - Github: [github.com/rdhaliwal](https://github.com/rdhaliwal)
 - Codepen: [codepen.io/rdhaliwal](https://codepen.io/rdhaliwal)
 
