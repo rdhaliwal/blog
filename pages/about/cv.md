@@ -36,9 +36,16 @@ export default ({ children }) => (
 
 ## Experience
 
+### See Mode
+
+**Senior Software Engineer // Apr 2021 - Present**
+
+- I literally just started. Will update with more details of my experience once i've been here a while :)
+
+---
 ### Redbubble
 
-**Senior Software Engineer // Apr 2018 - Present**
+**Senior Software Engineer // Apr 2018 - Apr 2021**
 
 - Front end (web) experience includes React, GraphQL, Apollo, SASS, PostCSS
 - Front end (native app) experience includes Swift, SwiftUI and UIKit
